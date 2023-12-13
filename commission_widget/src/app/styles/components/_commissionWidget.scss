@@ -1,0 +1,21 @@
+.widget-container {
+    position: relative;
+    background-color: $widget-background-color;
+    border-radius: 5px;
+    border: 2px solid $accent-color;
+    padding: 20px;
+    width: calc(100% - 20px);
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+  
+    h2 {
+      margin-bottom: 15px;
+    }
+  
+    .revenue-input-area,
+    .commission-display-area {
+      margin-bottom: 10px;
+    }
+  }
+  
