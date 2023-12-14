@@ -10,8 +10,13 @@
     .sub-widget-content {
         padding:10px 0px;
         justify-content:center;
+        align-items: center;
         display:flex;
         flex-direction: column;
         flex-grow:1;
+        
+        p {
+            font-size: 32px;
+        }
     }
 }

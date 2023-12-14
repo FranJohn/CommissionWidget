@@ -16,7 +16,7 @@ interface SubWidgetInterface {
 const SubWidget: React.FC<SubWidgetInterface> = ({ children, title }) => {
   return (
     <div className="sub-widget">
-        <h6>{title}</h6>
+        <h5>{title}</h5>
         <div className="sub-widget-content">
             {children}
         </div>
