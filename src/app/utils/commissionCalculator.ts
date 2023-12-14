@@ -31,7 +31,12 @@ export interface CommissionResult {
  * @param {number} revenue - The revenue for which the commission is calculated.
  * @returns {CommissionResult} - The calculated commission result.
  */
-export const calculateCommission = (revenue: number): CommissionResult => {
+export const calculateCommission = (revenue: number | null): CommissionResult => {
+    // Handle a null click
+    if (revenue === null) {
+        revenue = 0;
+    }
+
     let totalCommission = 0;
     const bandCommissions: { band: string; amount: number }[] = [];
 

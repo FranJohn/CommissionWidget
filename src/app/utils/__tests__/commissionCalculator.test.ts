@@ -1,3 +1,4 @@
+import '@testing-library/jest-dom';
 import { calculateCommission, CommissionResult } from '../commissionCalculator';
 
 describe('calculateCommission function', () => {
@@ -18,6 +19,16 @@ describe('calculateCommission function', () => {
 
     it('returns zero commission for zero revenue', () => {
         const revenue = 0;
+        const expected: CommissionResult = {
+        totalCommission: 0,
+        bandCommissions: [],
+        };
+        const result = calculateCommission(revenue);
+        expect(result).toEqual(expected);
+    });
+
+    it('returns zero commission for null revenue', () => {
+        const revenue = null;
         const expected: CommissionResult = {
         totalCommission: 0,
         bandCommissions: [],
@@ -47,6 +58,7 @@ describe('calculateCommission function', () => {
         expect(result.bandCommissions).toHaveLength(4); 
         expect(result).toEqual(expected);
     });
+
     it('should handle revenue beyond the defined bands', () => {
         const result = calculateCommission(30000);
         const expected: CommissionResult = {
@@ -62,6 +74,5 @@ describe('calculateCommission function', () => {
         expect(result.totalCommission).toEqual(4750); 
         expect(result.bandCommissions).toHaveLength(5); 
         expect(result).toEqual(expected);
-
     });
 });
