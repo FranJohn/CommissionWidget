@@ -2,7 +2,8 @@
 import React, { useState } from 'react';
 import CommissionWidget from '@/app/components/CommissionWidget';
 import InputField from '../components/InputFeild';
-//import calculateCommission from '../utils/commissionCalculator';
+import SubWidget from '../components/SubWidget';
+import calculateCommission from '../utils/commissionCalculator';
 
 const HomePage: React.FC = () => {
     /**
@@ -10,6 +11,7 @@ const HomePage: React.FC = () => {
      * @type {number | null}
      */
     const [revenue, setRevenue] = useState<number | null>(null);
+    const [commissions, setCommissions] = useState<number | null>(null);
 
     /**
      * Function to handle changes in revenue input.
@@ -21,19 +23,21 @@ const HomePage: React.FC = () => {
     };
 
     const handleCalculateCommission = () => {
-        //calculateCommission(revenue);
+        calculateCommissions(revenue);
     }
     
   return (  
-    <CommissionWidget>
-        <h2>Commission</h2>
-        <InputField
-            placeholder="Enter revenue value..."
-            onChange={handleRevenueChange}
-        />   
-        <button onClick={handleCalculateCommission}>Calculate</button>
+    <CommissionWidget title="Commission">
+        <SubWidget title="Calculate Commission">
+            <InputField
+                placeholder="Enter revenue value..."
+                onChange={handleRevenueChange}
+            />   
+            <button onClick={handleCalculateCommission}>Calculate</button>
+        </SubWidget>    
+        <SubWidget title="Total Revenue">
         <h3>Revenue is:{revenue} </h3>        
-        <p className="commission-display-area"> Commision display area input= revenue</p>
+        </SubWidget>    
     </CommissionWidget>
   )
 ;

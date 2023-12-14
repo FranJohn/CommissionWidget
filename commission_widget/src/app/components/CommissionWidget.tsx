@@ -6,6 +6,7 @@ import React, { ReactNode } from 'react';
  */
 interface CommissionWidgetInterface {
     children: ReactNode;
+    title: string;
 }
 
 /**
@@ -13,10 +14,13 @@ interface CommissionWidgetInterface {
  * @param {CommissionWidgetProps} props - The props for CommissionWidget.
  * @returns {JSX.Element} JSX for CommissionWidget component.
  */
-const CommissionWidget: React.FC<CommissionWidgetInterface> = ({ children }) => {
+const CommissionWidget: React.FC<CommissionWidgetInterface> = ({ children, title }) => {
     return (
-        <div className="widget-container">
-            {children}
+        <div className="widget-title-container">
+            <h2>{title}</h2>
+            <div className="widget-container">
+                {children}
+            </div>
         </div>
     );
 };
