@@ -15,4 +15,10 @@ describe('CommissionWidget Component', () => {
     const { getByText } = render(<CommissionWidget title="Test Title">{childContent}</CommissionWidget>);
     expect(getByText(childContent)).toBeInTheDocument();
   });
+
+  it('matches the CommissionWidget snapshot', () => {
+    const childContent = 'Child content';
+    const { container } = render(<CommissionWidget title="Test Title">{childContent}</CommissionWidget>);
+    expect(container).toMatchSnapshot();
+  });
 });

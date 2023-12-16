@@ -11,8 +11,14 @@ describe('SubWidget Component', () => {
     });
 
     it('renders children content', () => {
-        const childContent = 'Childrent';
+        const childContent = 'Children';
         const { getByText } = render(<SubWidget title="Test Title">{childContent}</SubWidget>);
         expect(getByText(childContent)).toBeInTheDocument();
+    });
+
+    it('matches the SubWidget snapshot', () => {
+        const childContent = 'Children';
+        const { container } = render(<SubWidget title="Test Title">{childContent}</SubWidget>);
+        expect(container).toMatchSnapshot();
     });
 });
