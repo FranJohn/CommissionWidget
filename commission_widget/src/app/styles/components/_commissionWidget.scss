@@ -21,10 +21,11 @@
     }
 
     .widget-container {
+        flex-wrap: wrap;
         display: flex;
         position: relative;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: center;
     }
 
 }

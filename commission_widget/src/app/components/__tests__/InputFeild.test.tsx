@@ -45,4 +45,10 @@ describe('InputFeild component', () => {
         fireEvent.focus(inputElement);
         expect(onChange).toHaveBeenCalledWith(34);
     });
+
+    it('matches the InputFeild snapshot', () => {
+        const onChange = jest.fn();
+        const { container } = render(<InputFeild placeholder="Enter value" onChange={onChange} />);
+        expect(container).toMatchSnapshot();
+    });
 });
