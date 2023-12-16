@@ -3,6 +3,7 @@ import React, { ChangeEvent } from 'react';
 interface InputFieldProps {
   placeholder?: string;
   onChange: (value: number) => void;
+  currencyType?: string;
 }
 
 /**
@@ -10,7 +11,7 @@ interface InputFieldProps {
  * @param {InputFieldProps} props - Properties for the InputField component.
  * @returns {JSX.Element} - JSX for the InputField component.
  */
-const InputField: React.FC<InputFieldProps> = ({ placeholder = '', onChange }) => {
+const InputField: React.FC<InputFieldProps> = ({ placeholder = '', onChange, currencyType = 'GBP' }) => {
     /**
      * Function to handle changes in the input field.
      * @param {ChangeEvent<HTMLInputElement>} event - The change event object.
@@ -52,7 +53,8 @@ const InputField: React.FC<InputFieldProps> = ({ placeholder = '', onChange }) =
                 onChange={handleInputChange}
                 onFocus={handleInputFocus}
                 className="custom-input"
-            />
+            /> 
+            {currencyType}
         </div>
     );
 };

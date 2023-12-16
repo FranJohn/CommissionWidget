@@ -1,11 +1,11 @@
 import React, { ReactNode } from 'react';
-
+import { v4 } from 'uuid';
 /**
  * Props for the SubWidget component.
  */
 interface SubWidgetInterface {
   children: ReactNode;
-  title: string;
+  title?: Array<string>;
 }
 
 /**
@@ -16,7 +16,9 @@ interface SubWidgetInterface {
 const SubWidget: React.FC<SubWidgetInterface> = ({ children, title }) => {
   return (
     <div className="sub-widget">
-        <h5>{title}</h5>
+          {Array.isArray(title) && title.map((line) => (
+            <h5 key={v4()}>{line}</h5>
+          ))}
         <div className="sub-widget-content">
             {children}
         </div>
