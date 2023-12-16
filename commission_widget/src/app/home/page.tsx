@@ -1,13 +1,12 @@
 'use client'
-import React, { useState, useEffect } from 'react';
-import { v4 } from 'uuid';
-import CommissionWidget from '@/app/components/CommissionWidget';
-import InputField from '../components/InputFeild';
-import SubWidget from '../components/SubWidget';
-import { calculateCommission, CommissionResult, commissionScheme } from '../utils/commissionCalculator';
-import { formatCommission } from '../utils/currency';
+import React, { useState } from 'react';
+import CommissionWidget from '../components/CommissionWidget';
+import RevenueSection from '../components/RevenueSection';
+import CommissionDetailsSection from '../components/CommissionDetailsSection';
+import { CommissionResult } from '../utils/commissionCalculator';
 import { simulateAPICall } from '../utils/apiService';
 import LoadingSpinner from '../components/Loading';
+
 
 const HomePage: React.FC = () => {
     /**
@@ -43,29 +42,16 @@ const HomePage: React.FC = () => {
 
     return (  
         <CommissionWidget title="Commission">
-            {loading && ( <LoadingSpinner /> )}
-            <SubWidget title="Calculate Commission">
-                <InputField
-                    placeholder="Enter revenue value..."
-                    onChange={handleRevenueChange}
-                />   
-                <button onClick={handleCalculateCommission}>Calculate</button>
-            </SubWidget>    
-            <SubWidget title="Total Revenue">
-                <p>{formatCommission(commissions?.totalCommission || 0)}</p>
-            </SubWidget>    
-            {commissionScheme.map((band, index) => {
-                const { amount } = commissions?.bandCommissions[index] || { amount: 0 };
-                const commissionAmount = formatCommission(amount);
-                return (
-                    <SubWidget key={index} title={`band: £${band.min} - £${band.max || '∞'}`}>
-                        <p>{commissionAmount}</p>
-                    </SubWidget>
-                );
-            })}
+            {loading && (<LoadingSpinner />)}
+            <div className="subwidget-container">
+                <RevenueSection
+                    handleRevenueChange={handleRevenueChange}
+                    handleCalculateCommission={handleCalculateCommission}
+                />
+                <CommissionDetailsSection commissions={commissions} />
+            </div>
         </CommissionWidget>
-    )
-;
+    );
 };
 
 export default HomePage;

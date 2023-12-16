@@ -10,6 +10,7 @@ exports[`InputFeild component matches the InputFeild snapshot 1`] = `
       placeholder="Enter value"
       type="text"
     />
+    GBP
   </div>
 </div>
 `;

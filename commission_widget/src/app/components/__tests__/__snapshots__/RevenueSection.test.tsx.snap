@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RevenueSection component matches the SubWidget snapshot 1`] = `
+<div>
+  <div
+    class="sub-widget"
+  >
+    <h5>
+      Calculate Commission
+    </h5>
+    <div
+      class="sub-widget-content"
+    >
+      <div
+        class="input-wrapper"
+      >
+        <input
+          class="custom-input"
+          placeholder="Enter revenue value..."
+          type="text"
+        />
+        GBP
+      </div>
+      <button>
+        Calculate
+      </button>
+    </div>
+  </div>
+</div>
+`;
