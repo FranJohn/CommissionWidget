@@ -1,18 +1,25 @@
-'use client'
-import React, { useState } from 'react';
+import React, { ReactNode } from 'react';
 
-const CommissionWidget: React.FC = () => {
-    const [revenue, setRevenue] = useState<number | null>(null);
+/**
+ * Props for the CommissionWidget component.
+ */
+interface CommissionWidgetInterface {
+    children: ReactNode;
+    title: string;
+}
 
-    const handleRevenueChange = (value: number | null) => {
-        setRevenue(value);
-    };
-
+/**
+ * CommissionWidget component for handling commission calculations.
+ * @param {CommissionWidgetProps} props - The props for CommissionWidget.
+ * @returns {JSX.Element} JSX for CommissionWidget component.
+ */
+const CommissionWidget: React.FC<CommissionWidgetInterface> = ({ children, title }) => {
     return (
-        <div className="widget-container">
-            <h2>Commission Calculator</h2>
-            <p className="revenue-input-area"> Revenue input area input=onChange(handleRevenueChange)</p>
-            <p className="commission-display-area"> Commision display area input= revenue</p>
+        <div className="widget-title-container">
+            <h2>{title}</h2>
+            <div className="widget-container">
+                {children}
+            </div>
         </div>
     );
 };

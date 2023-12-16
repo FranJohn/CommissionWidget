@@ -5,7 +5,11 @@
 @import '_layout';
 
 // Import pages
-@import 'page/_page';
+@import 'pages/_home';
 
 // Import components
 @import 'components/_commissionWidget';
+@import 'components/_inputFeild';
+@import 'components/_subWidget';
+@import 'components/_loading';
+@import 'components/_revenueSection';

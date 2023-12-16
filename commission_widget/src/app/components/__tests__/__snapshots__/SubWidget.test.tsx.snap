@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SubWidget Component matches the SubWidget snapshot 1`] = `
+<div>
+  <div
+    class="sub-widget"
+  >
+    <h5>
+      Test Title
+    </h5>
+    <div
+      class="sub-widget-content"
+    >
+      Children
+    </div>
+  </div>
+</div>
+`;

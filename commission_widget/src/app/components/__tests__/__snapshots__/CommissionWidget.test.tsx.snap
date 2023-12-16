@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CommissionWidget Component matches the CommissionWidget snapshot 1`] = `
+<div>
+  <div
+    class="widget-title-container"
+  >
+    <h2>
+      Test Title
+    </h2>
+    <div
+      class="widget-container"
+    >
+      Child content
+    </div>
+  </div>
+</div>
+`;

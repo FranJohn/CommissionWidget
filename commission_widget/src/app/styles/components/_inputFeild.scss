@@ -1,0 +1,17 @@
+.input-wrapper {
+    margin-bottom: 15px;
+}
+  
+.custom-input {
+    // width: 100%;
+    padding: 8px;
+    border: 1px solid $accent-color;
+    border-radius: 3px;
+    font-size: 14px; 
+
+    &:focus {
+        outline: none;
+        border-color: #007bff; 
+    }
+  }
+  

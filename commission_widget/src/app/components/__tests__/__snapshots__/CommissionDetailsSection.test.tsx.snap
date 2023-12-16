@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CommissionDetailsSection component matches the CommissionDetailsSection snapshot 1`] = `
+<div>
+  <div
+    class="sub-widget"
+  >
+    <h5>
+      Total Revenue
+    </h5>
+    <div
+      class="sub-widget-content"
+    >
+      <p>
+        £1,400.00
+      </p>
+    </div>
+  </div>
+  <div
+    class="sub-widget"
+  >
+    <h5>
+      Commission Band:
+    </h5>
+    <h5>
+      £0 - £5000
+    </h5>
+    <div
+      class="sub-widget-content"
+    >
+      <p>
+        £200.00
+      </p>
+    </div>
+  </div>
+  <div
+    class="sub-widget"
+  >
+    <h5>
+      Commission Band:
+    </h5>
+    <h5>
+      £5000 - £10000
+    </h5>
+    <div
+      class="sub-widget-content"
+    >
+      <p>
+        £300.00
+      </p>
+    </div>
+  </div>
+  <div
+    class="sub-widget"
+  >
+    <h5>
+      Commission Band:
+    </h5>
+    <h5>
+      £10000 - £15000
+    </h5>
+    <div
+      class="sub-widget-content"
+    >
+      <p>
+        £400.00
+      </p>
+    </div>
+  </div>
+  <div
+    class="sub-widget"
+  >
+    <h5>
+      Commission Band:
+    </h5>
+    <h5>
+      £15000 - £20000
+    </h5>
+    <div
+      class="sub-widget-content"
+    >
+      <p>
+        £500.00
+      </p>
+    </div>
+  </div>
+  <div
+    class="sub-widget"
+  >
+    <h5>
+      Commission Band:
+    </h5>
+    <h5>
+      £20000 +
+    </h5>
+    <div
+      class="sub-widget-content"
+    >
+      <p>
+        £0.00
+      </p>
+    </div>
+  </div>
+</div>
+`;

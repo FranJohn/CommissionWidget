@@ -1,0 +1,23 @@
+.sub-widget {
+    display: flex;
+    flex-direction: column;
+    min-width: 150px; 
+    height: 150px; 
+    border: 2px solid $accent-color;
+    border-radius: 5px;
+    padding: 10px;
+    margin:10px 10px 10px 0px;
+
+    .sub-widget-content {
+        padding:10px 0px;
+        justify-content:center;
+        align-items: center;
+        display:flex;
+        flex-direction: column;
+        flex-grow:1;
+        
+        p {
+            font-size: 24px;
+        }
+    }
+}

@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InputFeild component matches the InputFeild snapshot 1`] = `
+<div>
+  <div
+    class="input-wrapper"
+  >
+    <input
+      class="custom-input"
+      placeholder="Enter value"
+      type="text"
+    />
+    GBP
+  </div>
+</div>
+`;
