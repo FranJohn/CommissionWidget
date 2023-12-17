@@ -37,29 +37,24 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
-          cache: ${{ steps.detect-package-manager.outputs.manager }}
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-        with:
-          # Automatically inject basePath in your Next.js configuration file and disable
-          # server side image optimization (https://nextjs.org/docs/api-reference/next/image#unoptimized).
-          #
-          # You may remove this line if you want to manage the configuration yourself.
-          static_site_generator: next
+          cache: npm
       - name: Install dependencies
         run: |
+          cd commission-widget
           npm ci
       - name: Build with Next.js
         run: | 
+          cd commission-widget
           npm run build
-          
       - name: Static HTML export with Next.js
         run:  |
+          cd commission-widget
           npm run export
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-artifact@v2
         with:
-          path: ./out
+          name: nextjs-build
+          path: commission-widget/out
 
   # Deployment job
   deploy:
@@ -72,3 +67,4 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v3
+
