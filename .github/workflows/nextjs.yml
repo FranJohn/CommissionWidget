@@ -47,16 +47,13 @@ jobs:
           # You may remove this line if you want to manage the configuration yourself.
           static_site_generator: next
       - name: Install dependencies
-        working-directory: commission-widget
         run: |
           npm ci
       - name: Build with Next.js
-        working-directory: commission-widget
         run: | 
           npm run build
           
       - name: Static HTML export with Next.js
-        working-directory: commission-widget
         run:  |
           npm run export
       - name: Upload artifact
