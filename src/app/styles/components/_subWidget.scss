@@ -8,6 +8,10 @@
     padding: 10px;
     margin:10px 10px 10px 0px;
 
+    @media screen and (max-width: 767px) {
+        width: 100%; 
+    }
+
     .sub-widget-content {
         padding:10px 0px;
         justify-content:center;

@@ -1,4 +1,4 @@
-import { calculateCommission, CommissionResult } from '@/app/utils/commissionCalculator';
+import { calculateCommission, CommissionResult } from './commissionCalculator';
 
 export const simulateAPICall = (revenue: number | null): Promise<CommissionResult> => {
     return new Promise((resolve, reject) => {
