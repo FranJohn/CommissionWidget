@@ -22,7 +22,7 @@ const RevenueSection: React.FC<RevenueSectionProps> = ({ handleRevenueChange, ha
                 placeholder="Enter revenue value..."
                 onChange={handleRevenueChange}
             />   
-            <button onClick={handleCalculateCommission}>Calculate</button>
+            <button onClick={handleCalculateCommission} data-testid="calculate-button">Calculate</button>
         </SubWidget>
     );
 };

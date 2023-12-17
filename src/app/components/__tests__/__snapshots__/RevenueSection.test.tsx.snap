@@ -21,7 +21,9 @@ exports[`RevenueSection component matches the SubWidget snapshot 1`] = `
         />
         GBP
       </div>
-      <button>
+      <button
+        data-testid="calculate-button"
+      >
         Calculate
       </button>
     </div>
